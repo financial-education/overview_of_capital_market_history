@@ -1,0 +1,40 @@
+#+title: An Overview of Capital Market History
+#+author: Matt Brigida, Ph.D.
+#+STARTUP: hideblocks
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
+* Goal
+
+Using historical data we want to get an idea about the relationship between risk and return.  In particular that =higher risk affords higher return=.  In later chapters we will see that this statement is too simplistic, and in fact only =higher systematic risk affords higher returns=.
+
+*  Calculating Returns
+
+To calculate returns we need to first calculate our dollar gain or loss, and then divide this by the cost of our investment.
+
+* Average vs Geometric Returns
+  
+
+
+
+#+begin_export html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N_lLReTkZgw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+* The Distribution of Asset Returns
+  
+
+
+
+
+
+
+
+
+* The Historical Record: 1999-2019
+  
+[[https://www.blackrock.com/us/individual/literature/investor-education/asset-class-returns-one-pager-va-us.pdf][See this Blackrock document.]]
+
+* The Yield Curve and Recessions
+
+[[https://financial-education.github.io/the_yield_curve_and_recessions/][See the this link.]]
+
