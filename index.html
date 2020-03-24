@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-03-20 Fri 18:24 -->
+<!-- 2020-03-24 Tue 09:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>An Overview of Capital Market History</title>
@@ -240,18 +240,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org32313c5">1. Goal</a></li>
-<li><a href="#org31408b5">2. Calculating Returns</a></li>
-<li><a href="#org9745ecc">3. Average vs Geometric Returns</a></li>
-<li><a href="#orga809b5f">4. The Distribution of Asset Returns</a></li>
-<li><a href="#org63a83a8">5. The Historical Record: 1999-2019</a></li>
-<li><a href="#orgb996869">6. The Yield Curve and Recessions</a></li>
+<li><a href="#orga36e876">1. Goal</a></li>
+<li><a href="#orgb7e5d9b">2. Calculating Returns</a></li>
+<li><a href="#org3582288">3. Average vs Geometric Returns</a></li>
+<li><a href="#orgd71e1a4">4. The Distribution of Asset Returns</a>
+<ul>
+<li><a href="#orgbfec8a4">4.1. Describing stock returns</a></li>
+<li><a href="#org0e72919">4.2. Using stock distributions to measure risk</a></li>
+<li><a href="#org46aa0ea">4.3. Stock distributions changing over time</a></li>
+<li><a href="#orga785c9b">4.4. Variance (risk) increases when markets decline</a></li>
+<li><a href="#orgcb78b08">4.5. Distributions over time</a></li>
+</ul>
+</li>
+<li><a href="#org95afd47">5. The Historical Record: 1999-2019</a></li>
+<li><a href="#orgbf1195c">6. The Yield Curve and Recessions</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org32313c5" class="outline-2">
-<h2 id="org32313c5"><span class="section-number-2">1</span> Goal</h2>
+<div id="outline-container-orga36e876" class="outline-2">
+<h2 id="orga36e876"><span class="section-number-2">1</span> Goal</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Using historical data we want to get an idea about the relationship between risk and return.  In particular that <code>higher risk affords higher return</code>.  In later chapters we will see that this statement is too simplistic, and in fact only <code>higher systematic risk affords higher returns</code>.
@@ -259,8 +267,8 @@ Using historical data we want to get an idea about the relationship between risk
 </div>
 </div>
 
-<div id="outline-container-org31408b5" class="outline-2">
-<h2 id="org31408b5"><span class="section-number-2">2</span> Calculating Returns</h2>
+<div id="outline-container-orgb7e5d9b" class="outline-2">
+<h2 id="orgb7e5d9b"><span class="section-number-2">2</span> Calculating Returns</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 To calculate returns we need to first calculate our dollar gain or loss, and then divide this by the cost of our investment.
@@ -268,21 +276,57 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 </div>
 
-<div id="outline-container-org9745ecc" class="outline-2">
-<h2 id="org9745ecc"><span class="section-number-2">3</span> Average vs Geometric Returns</h2>
+<div id="outline-container-org3582288" class="outline-2">
+<h2 id="org3582288"><span class="section-number-2">3</span> Average vs Geometric Returns</h2>
 <div class="outline-text-2" id="text-3">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N_lLReTkZgw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 
-<div id="outline-container-orga809b5f" class="outline-2">
-<h2 id="orga809b5f"><span class="section-number-2">4</span> The Distribution of Asset Returns</h2>
+<div id="outline-container-orgd71e1a4" class="outline-2">
+<h2 id="orgd71e1a4"><span class="section-number-2">4</span> The Distribution of Asset Returns</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbfec8a4" class="outline-3">
+<h3 id="orgbfec8a4"><span class="section-number-3">4.1</span> Describing stock returns</h3>
+<div class="outline-text-3" id="text-4-1">
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/what_is_risk_app1/"></iframe>
+</div>
+</div>
+
+<div id="outline-container-org0e72919" class="outline-3">
+<h3 id="org0e72919"><span class="section-number-3">4.2</span> Using stock distributions to measure risk</h3>
+<div class="outline-text-3" id="text-4-2">
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/what_is_risk_app2/"></iframe>
+</div>
 </div>
 
 
+<div id="outline-container-org46aa0ea" class="outline-3">
+<h3 id="org46aa0ea"><span class="section-number-3">4.3</span> Stock distributions changing over time</h3>
+<div class="outline-text-3" id="text-4-3">
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/risk_future_past_app1/"></iframe>
+</div>
+</div>
 
-<div id="outline-container-org63a83a8" class="outline-2">
-<h2 id="org63a83a8"><span class="section-number-2">5</span> The Historical Record: 1999-2019</h2>
+
+<div id="outline-container-orga785c9b" class="outline-3">
+<h3 id="orga785c9b"><span class="section-number-3">4.4</span> Variance (risk) increases when markets decline</h3>
+<div class="outline-text-3" id="text-4-4">
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/The_VIX_app1/"></iframe>
+</div>
+</div>
+
+<div id="outline-container-orgcb78b08" class="outline-3">
+<h3 id="orgcb78b08"><span class="section-number-3">4.5</span> Distributions over time</h3>
+<div class="outline-text-3" id="text-4-5">
+<iframe width="780" height="500" frameborder="0" src=""></iframe>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org95afd47" class="outline-2">
+<h2 id="org95afd47"><span class="section-number-2">5</span> The Historical Record: 1999-2019</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="https://www.blackrock.com/us/individual/literature/investor-education/asset-class-returns-one-pager-va-us.pdf">See this Blackrock document.</a>
@@ -290,8 +334,8 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 </div>
 
-<div id="outline-container-orgb996869" class="outline-2">
-<h2 id="orgb996869"><span class="section-number-2">6</span> The Yield Curve and Recessions</h2>
+<div id="outline-container-orgbf1195c" class="outline-2">
+<h2 id="orgbf1195c"><span class="section-number-2">6</span> The Yield Curve and Recessions</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <a href="https://financial-education.github.io/the_yield_curve_and_recessions/">See the this link.</a>
@@ -301,7 +345,7 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Matt Brigida, Ph.D.</p>
-<p class="date">Created: 2020-03-20 Fri 18:24</p>
+<p class="date">Created: 2020-03-24 Tue 09:00</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

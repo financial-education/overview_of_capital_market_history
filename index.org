@@ -21,14 +21,40 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 #+end_export
 
 * The Distribution of Asset Returns
-  
+ 
+** Describing stock returns 
+
+#+begin_export html
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/what_is_risk_app1/"></iframe>
+#+end_export
+
+** Using stock distributions to measure risk
+
+#+begin_export html
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/what_is_risk_app2/"></iframe>
+#+end_export
 
 
+** Stock distributions changing over time
+
+#+begin_export html
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/risk_future_past_app1/"></iframe>
+#+end_export
 
 
+** Variance (risk) increases when markets decline
 
 
+#+begin_export html
+<iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/The_VIX_app1/"></iframe>
+#+end_export
 
+** Distributions over time
+
+
+#+begin_export html
+<iframe width="780" height="500" frameborder="0" src=""></iframe>
+#+end_export
 
 * The Historical Record: 1999-2019
   
