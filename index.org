@@ -11,8 +11,15 @@ Using historical data we want to get an idea about the relationship between risk
 
 To calculate returns we need to first calculate our dollar gain or loss, and then divide this by the cost of our investment.
 
-* Average vs Geometric Returns
-  
+* Arithmetic Average vs Geometric Average Returns
+
+- Arithmetic Average: 
+
+$$\bar{r}_{aa} = \frac{r_1 + r_2 + .... + r_n}{n}$$
+
+- Geometric Average:
+
+$$\bar{r}_{ga} = (r_1 r_2 .... r_n)^{(1/n)}$$
 
 
 
