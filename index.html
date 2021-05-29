@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-03-24 Tue 16:31 -->
+<!-- 2021-05-28 Fri 22:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>An Overview of Capital Market History</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -180,57 +193,33 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -262,26 +251,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga070447">1. Goal</a></li>
-<li><a href="#org5a9c42d">2. Calculating Returns</a></li>
-<li><a href="#org7360a36">3. Arithmetic Average vs Geometric Average Returns</a></li>
-<li><a href="#org303a30c">4. The Distribution of Asset Returns</a>
+<li><a href="#org9f165ae">1. Goal</a></li>
+<li><a href="#orga26834b">2. Calculating Returns</a></li>
+<li><a href="#orgcab24a6">3. Arithmetic Average vs Geometric Average Returns</a></li>
+<li><a href="#org37018bd">4. The Distribution of Asset Returns</a>
 <ul>
-<li><a href="#org2c4bb1d">4.1. Describing stock returns</a></li>
-<li><a href="#org2de50bc">4.2. Using stock distributions to measure risk</a></li>
-<li><a href="#org851f9b5">4.3. Stock distributions changing over time</a></li>
-<li><a href="#orge966c90">4.4. Variance (risk) increases when markets decline</a></li>
-<li><a href="#org9585e61">4.5. Distributions over time</a></li>
+<li><a href="#org16e173a">4.1. Describing stock returns</a></li>
+<li><a href="#org87de769">4.2. Using stock distributions to measure risk</a></li>
+<li><a href="#org4a3c7a7">4.3. Stock distributions changing over time</a></li>
+<li><a href="#org0212eb5">4.4. Variance (risk) increases when markets decline</a></li>
+<li><a href="#org6c3d36f">4.5. Distributions over time</a></li>
 </ul>
 </li>
-<li><a href="#org747ca67">5. The Historical Record: 1999-2019</a></li>
-<li><a href="#orgfbaaaa9">6. The Yield Curve and Recessions</a></li>
+<li><a href="#orgfe75eca">5. The Historical Record: 1999-2019</a></li>
+<li><a href="#org60f6475">6. The Yield Curve and Recessions</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga070447" class="outline-2">
-<h2 id="orga070447"><span class="section-number-2">1</span> Goal</h2>
+<div id="outline-container-org9f165ae" class="outline-2">
+<h2 id="org9f165ae"><span class="section-number-2">1.</span> Goal</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Using historical data we want to get an idea about the relationship between risk and return.  In particular that <code>higher risk affords higher return</code>.  In later chapters we will see that this statement is too simplistic, and in fact only <code>higher systematic risk affords higher returns</code>.
@@ -289,8 +278,8 @@ Using historical data we want to get an idea about the relationship between risk
 </div>
 </div>
 
-<div id="outline-container-org5a9c42d" class="outline-2">
-<h2 id="org5a9c42d"><span class="section-number-2">2</span> Calculating Returns</h2>
+<div id="outline-container-orga26834b" class="outline-2">
+<h2 id="orga26834b"><span class="section-number-2">2.</span> Calculating Returns</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 To calculate returns we need to first calculate our dollar gain or loss, and then divide this by the cost of our investment.
@@ -298,8 +287,8 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 </div>
 
-<div id="outline-container-org7360a36" class="outline-2">
-<h2 id="org7360a36"><span class="section-number-2">3</span> Arithmetic Average vs Geometric Average Returns</h2>
+<div id="outline-container-orgcab24a6" class="outline-2">
+<h2 id="orgcab24a6"><span class="section-number-2">3.</span> Arithmetic Average vs Geometric Average Returns</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Arithmetic Average:</li>
@@ -323,50 +312,50 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 </div>
 
-<div id="outline-container-org303a30c" class="outline-2">
-<h2 id="org303a30c"><span class="section-number-2">4</span> The Distribution of Asset Returns</h2>
+<div id="outline-container-org37018bd" class="outline-2">
+<h2 id="org37018bd"><span class="section-number-2">4.</span> The Distribution of Asset Returns</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org2c4bb1d" class="outline-3">
-<h3 id="org2c4bb1d"><span class="section-number-3">4.1</span> Describing stock returns</h3>
+<div id="outline-container-org16e173a" class="outline-3">
+<h3 id="org16e173a"><span class="section-number-3">4.1.</span> Describing stock returns</h3>
 <div class="outline-text-3" id="text-4-1">
 <iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/what_is_risk_app1/"></iframe>
 </div>
 </div>
 
-<div id="outline-container-org2de50bc" class="outline-3">
-<h3 id="org2de50bc"><span class="section-number-3">4.2</span> Using stock distributions to measure risk</h3>
+<div id="outline-container-org87de769" class="outline-3">
+<h3 id="org87de769"><span class="section-number-3">4.2.</span> Using stock distributions to measure risk</h3>
 <div class="outline-text-3" id="text-4-2">
 <iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/what_is_risk_app2/"></iframe>
 </div>
 </div>
 
 
-<div id="outline-container-org851f9b5" class="outline-3">
-<h3 id="org851f9b5"><span class="section-number-3">4.3</span> Stock distributions changing over time</h3>
+<div id="outline-container-org4a3c7a7" class="outline-3">
+<h3 id="org4a3c7a7"><span class="section-number-3">4.3.</span> Stock distributions changing over time</h3>
 <div class="outline-text-3" id="text-4-3">
 <iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/risk_future_past_app1/"></iframe>
 </div>
 </div>
 
 
-<div id="outline-container-orge966c90" class="outline-3">
-<h3 id="orge966c90"><span class="section-number-3">4.4</span> Variance (risk) increases when markets decline</h3>
+<div id="outline-container-org0212eb5" class="outline-3">
+<h3 id="org0212eb5"><span class="section-number-3">4.4.</span> Variance (risk) increases when markets decline</h3>
 <div class="outline-text-3" id="text-4-4">
 <iframe width="780" height="500" frameborder="0" src="https://micfm.shinyapps.io/The_VIX_app1/"></iframe>
 </div>
 </div>
 
-<div id="outline-container-org9585e61" class="outline-3">
-<h3 id="org9585e61"><span class="section-number-3">4.5</span> Distributions over time</h3>
+<div id="outline-container-org6c3d36f" class="outline-3">
+<h3 id="org6c3d36f"><span class="section-number-3">4.5.</span> Distributions over time</h3>
 <div class="outline-text-3" id="text-4-5">
 <iframe width="780" height="500" frameborder="0" src=""></iframe>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org747ca67" class="outline-2">
-<h2 id="org747ca67"><span class="section-number-2">5</span> The Historical Record: 1999-2019</h2>
+<div id="outline-container-orgfe75eca" class="outline-2">
+<h2 id="orgfe75eca"><span class="section-number-2">5.</span> The Historical Record: 1999-2019</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="https://www.blackrock.com/us/individual/literature/investor-education/asset-class-returns-one-pager-va-us.pdf">See this Blackrock document.</a>
@@ -374,8 +363,8 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 </div>
 
-<div id="outline-container-orgfbaaaa9" class="outline-2">
-<h2 id="orgfbaaaa9"><span class="section-number-2">6</span> The Yield Curve and Recessions</h2>
+<div id="outline-container-org60f6475" class="outline-2">
+<h2 id="org60f6475"><span class="section-number-2">6.</span> The Yield Curve and Recessions</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <a href="https://financial-education.github.io/the_yield_curve_and_recessions/">See the this link.</a>
@@ -385,8 +374,8 @@ To calculate returns we need to first calculate our dollar gain or loss, and the
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Matt Brigida, Ph.D.</p>
-<p class="date">Created: 2020-03-24 Tue 16:31</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2021-05-28 Fri 22:13</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
